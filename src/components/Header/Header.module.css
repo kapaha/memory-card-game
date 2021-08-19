@@ -1,0 +1,10 @@
+.header {
+    background-color: var(--clr-dark);
+    padding: 20px 10px;
+}
+
+.gameName {
+    text-align: center;
+    font-weight: 600;
+    color: var(--clr-white);
+}
