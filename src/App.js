@@ -1,11 +1,13 @@
-import { Header } from './components'
+import { Header, Game } from './components';
+import classes from './App.module.css';
 
 function App() {
-  return (
-    <>
-      <Header />
-    </>
-  );
+    return (
+        <div className={classes.container}>
+            <Header />
+            <Game />
+        </div>
+    );
 }
 
 export default App;
