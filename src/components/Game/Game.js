@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import useSquishmallows from '../../hooks/useSquishmallows';
-import classes from './Game.module.css';
+import React from 'react';
+import { useSquishmallows } from '../../hooks';
 import CardGrid from './CardGrid';
 import Scoreboard from './Scoreboard';
 
