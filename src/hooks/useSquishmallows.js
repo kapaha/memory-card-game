@@ -28,16 +28,34 @@ function getRandomSquishmallows(data, count) {
     return randomSquishmallows;
 }
 
+function getShuffledDeck(deckToShuffle) {
+    const deck = [...deckToShuffle];
+
+    for (let i = deck.length - 1; i > 0; i--) {
+        let randomIndex = Math.floor(Math.random() * (i + 1));
+
+        // swap elements array[i] and array[randomIndex]
+        [deck[i], deck[randomIndex]] = [deck[randomIndex], deck[i]];
+    }
+
+    return deck;
+}
+
 export default function useSquishmallows(count) {
-    const [activeSquishmallows, setPickedSquish] = useState([]);
+    const [activeSquishmallows, setActiveSquishmallows] = useState([]);
+
+    function shuffleDeck() {
+        const shuffledDeck = getShuffledDeck(activeSquishmallows);
+        setActiveSquishmallows(shuffledDeck);
+    }
 
     useEffect(() => {
         const randomSquishmallows = getRandomSquishmallows(
             squishmallowPngs,
             count
         );
-        setPickedSquish(randomSquishmallows);
+        setActiveSquishmallows(randomSquishmallows);
     }, [count]);
 
-    return activeSquishmallows;
+    return { activeSquishmallows, shuffleDeck };
 }

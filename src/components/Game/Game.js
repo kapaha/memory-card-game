@@ -4,11 +4,13 @@ import classes from './Game.module.css';
 import CardGrid from './CardGrid';
 
 export default function Game() {
-    const activeSquishmallows = useSquishmallows(2);
-
+    const { activeSquishmallows, shuffleDeck } = useSquishmallows(4);
     return (
         <main className={classes.container}>
-            <CardGrid squishmallows={activeSquishmallows} />
+            <CardGrid
+                squishmallows={activeSquishmallows}
+                shuffleDeck={shuffleDeck}
+            />
         </main>
     );
 }
