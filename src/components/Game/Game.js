@@ -5,16 +5,12 @@ import Scoreboard from './Scoreboard';
 import classes from './Game.module.css';
 
 export default function Game() {
-    const { activeSquishmallows, shuffleDeck, currentScore, bestScore } =
-        useGame();
+    const { activeCards, shuffleDeck, currentScore, bestScore } = useGame();
 
     return (
         <main className={classes.container}>
             <Scoreboard currentScore={currentScore} bestScore={bestScore} />
-            <CardGrid
-                squishmallows={activeSquishmallows}
-                shuffleDeck={shuffleDeck}
-            />
+            <CardGrid cards={activeCards} shuffleDeck={shuffleDeck} />
         </main>
     );
 }
