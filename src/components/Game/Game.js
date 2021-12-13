@@ -5,12 +5,12 @@ import Scoreboard from './Scoreboard';
 import classes from './Game.module.css';
 
 export default function Game() {
-    const { activeCards, shuffleDeck, currentScore, bestScore } = useGame();
+    const { activeCards, currentScore, bestScore, handleCardClick } = useGame();
 
     return (
         <main className={classes.container}>
             <Scoreboard currentScore={currentScore} bestScore={bestScore} />
-            <CardGrid cards={activeCards} shuffleDeck={shuffleDeck} />
+            <CardGrid cards={activeCards} handleCardClick={handleCardClick} />
         </main>
     );
 }

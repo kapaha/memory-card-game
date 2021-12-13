@@ -38,7 +38,7 @@ function createCards(imageModules) {
         return {
             name: getFileNameFromLocalPath(key),
             imgSrc: imageModules[key].default,
-            selected: false,
+            hasBeenPicked: false,
         };
     });
 }
