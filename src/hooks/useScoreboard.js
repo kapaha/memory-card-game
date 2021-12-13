@@ -6,10 +6,8 @@ export default function useScoreboard() {
 
     function incrementCurrentScore() {
         setCurrentScore((prevState) => (prevState += 1));
-    }
 
-    function incrementBestScore() {
-        setBestScore((prevState) => (prevState += 1));
+        if (currentScore + 1 > bestScore) setBestScore(currentScore + 1);
     }
 
     function resetCurrentScore() {
@@ -20,7 +18,6 @@ export default function useScoreboard() {
         currentScore,
         bestScore,
         incrementCurrentScore,
-        incrementBestScore,
         resetCurrentScore,
     };
 }
