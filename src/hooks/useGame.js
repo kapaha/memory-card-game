@@ -4,15 +4,21 @@ import { useCards, useScoreboard } from '.';
 const STARTING_CARDS_AMOUNT = 4;
 
 export default function useGame() {
-    const { activeCards, shuffleDeck } = useCards(STARTING_CARDS_AMOUNT);
-    const { currentScore, bestScore, incrementCurrentScore } = useScoreboard();
+    const { activeCards, shuffleDeck, getNewCards } = useCards(
+        STARTING_CARDS_AMOUNT
+    );
+    const {
+        currentScore,
+        bestScore,
+        incrementCurrentScore,
+        resetCurrentScore,
+    } = useScoreboard();
 
     const [isGameOver, setIsGameOver] = useState(false);
 
     function handleCardClick(card) {
         if (card.hasBeenPicked) {
             setIsGameOver(true);
-            gameOver();
             return;
         }
 
@@ -21,8 +27,10 @@ export default function useGame() {
         shuffleDeck();
     }
 
-    function gameOver() {
-        console.log('Game Over');
+    function resetGame() {
+        resetCurrentScore();
+        setIsGameOver(false);
+        getNewCards();
     }
 
     return {
@@ -31,5 +39,6 @@ export default function useGame() {
         bestScore,
         handleCardClick,
         isGameOver,
+        resetGame,
     };
 }

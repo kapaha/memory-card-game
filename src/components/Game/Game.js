@@ -12,12 +12,13 @@ export default function Game() {
         bestScore,
         handleCardClick,
         isGameOver,
+        resetGame,
     } = useGame();
 
     return (
         <main className={classes.container}>
             {isGameOver ? (
-                <GameOver currentScore={currentScore} />
+                <GameOver currentScore={currentScore} resetGame={resetGame} />
             ) : (
                 <>
                     <Scoreboard

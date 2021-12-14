@@ -52,6 +52,23 @@ export default function useCards(count) {
         setActiveCards(shuffledDeck);
     }
 
+    function getNewCards() {
+        resetPickedCards();
+        const randomCards = getRandomCards(cards, count);
+        setActiveCards(randomCards);
+    }
+
+    function resetPickedCards() {
+        setCards((prevState) => {
+            return prevState.map((card) => {
+                return {
+                    ...card,
+                    hasBeenPicked: false,
+                };
+            });
+        });
+    }
+
     useEffect(() => {
         const cardsImgModules = importImages();
         setCards(createCards(cardsImgModules));
@@ -63,5 +80,5 @@ export default function useCards(count) {
         setActiveCards(randomCards);
     }, [count, cards]);
 
-    return { activeCards, shuffleDeck };
+    return { activeCards, shuffleDeck, getNewCards };
 }
