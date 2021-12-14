@@ -1,0 +1,43 @@
+.container {
+    color: var(--clr-white);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.container > * + * {
+    margin-top: 1rem;
+}
+
+.gameOver {
+    font-weight: 600;
+}
+
+.score {
+    font-weight: 400;
+}
+
+.btn {
+    border: solid 2px transparent;
+    border-radius: 0.4em;
+    padding: 0.5em 1em;
+    color: var(--clr-white);
+    background-color: var(--clr-dark-900);
+    outline: solid transparent;
+}
+
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--clr-dark-900);
+    border-color: currentColor;
+    background-color: var(--clr-white);
+}
