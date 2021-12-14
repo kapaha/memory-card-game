@@ -76,9 +76,8 @@ export default function useCards(count) {
 
     useEffect(() => {
         const randomCards = getRandomCards(cards, count);
-
         setActiveCards(randomCards);
     }, [count, cards]);
 
-    return { activeCards, shuffleDeck, getNewCards };
+    return { activeCards, shuffleDeck, getNewCards, resetPickedCards };
 }

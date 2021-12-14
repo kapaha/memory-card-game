@@ -3,6 +3,7 @@ import { useGame } from '../../hooks';
 import CardGrid from './CardGrid';
 import Scoreboard from './Scoreboard';
 import GameOver from './GameOver';
+import Level from './Level';
 import classes from './Game.module.css';
 
 export default function Game() {
@@ -13,6 +14,7 @@ export default function Game() {
         handleCardClick,
         isGameOver,
         resetGame,
+        currentLevel,
     } = useGame();
 
     return (
@@ -21,6 +23,7 @@ export default function Game() {
                 <GameOver currentScore={currentScore} resetGame={resetGame} />
             ) : (
                 <>
+                    <Level currentLevel={currentLevel} />
                     <Scoreboard
                         currentScore={currentScore}
                         bestScore={bestScore}
