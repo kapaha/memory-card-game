@@ -29,7 +29,7 @@ export default function Game() {
                         bestScore={bestScore}
                     />
                     <CardGrid
-                        cards={activeCards}
+                        activeCards={activeCards}
                         handleCardClick={handleCardClick}
                     />
                 </>

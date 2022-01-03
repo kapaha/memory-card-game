@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useCards, useScoreboard } from '.';
 
-const STARTING_CARDS_AMOUNT = 4;
-const MAX_CARDS_AMOUNT = 5;
+const STARTING_CARDS_AMOUNT = 3;
+const MAX_CARDS_AMOUNT = 9;
 
 export default function useGame() {
     const [isGameOver, setIsGameOver] = useState(false);
@@ -10,7 +10,7 @@ export default function useGame() {
     const [cardsAmount, setCardsAmount] = useState(STARTING_CARDS_AMOUNT);
     const [currentLevel, setCurrentLevel] = useState(1);
 
-    const { activeCards, shuffleDeck, getNewCards, resetPickedCards } =
+    const { activeCards, shuffleDeck, getNewCards, pickCard, unpickAllCards } =
         useCards(cardsAmount);
     const {
         currentScore,
@@ -25,13 +25,13 @@ export default function useGame() {
             return;
         }
 
-        card.hasBeenPicked = true;
+        pickCard(card);
         setPickedCardCount((prevState) => (prevState += 1));
+
         incrementCurrentScore();
 
         if (pickedCardCount + 1 >= activeCards.length) {
             levelUp();
-            console.log('Level Up');
         }
 
         shuffleDeck();
@@ -39,7 +39,7 @@ export default function useGame() {
 
     function levelUp() {
         setPickedCardCount(0);
-        resetPickedCards();
+        unpickAllCards();
         setCurrentLevel((prevState) => (prevState += 1));
 
         if (cardsAmount + 1 <= MAX_CARDS_AMOUNT) {

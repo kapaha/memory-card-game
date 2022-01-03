@@ -48,25 +48,31 @@ export default function useCards(count) {
     const [activeCards, setActiveCards] = useState([]);
 
     function shuffleDeck() {
-        const shuffledDeck = getShuffledDeck(activeCards);
-        setActiveCards(shuffledDeck);
+        setActiveCards((prevState) => getShuffledDeck(prevState));
     }
 
     function getNewCards() {
-        resetPickedCards();
         const randomCards = getRandomCards(cards, count);
         setActiveCards(randomCards);
     }
 
-    function resetPickedCards() {
-        setCards((prevState) => {
-            return prevState.map((card) => {
-                return {
-                    ...card,
-                    hasBeenPicked: false,
-                };
-            });
-        });
+    function pickCard(pickedCard) {
+        setActiveCards((prevState) =>
+            prevState.map((card) =>
+                card === pickedCard
+                    ? {
+                          ...card,
+                          hasBeenPicked: true,
+                      }
+                    : card
+            )
+        );
+    }
+
+    function unpickAllCards() {
+        setActiveCards((prevState) =>
+            prevState.map((card) => ({ ...card, hasBeenPicked: false }))
+        );
     }
 
     useEffect(() => {
@@ -79,5 +85,11 @@ export default function useCards(count) {
         setActiveCards(randomCards);
     }, [count, cards]);
 
-    return { activeCards, shuffleDeck, getNewCards, resetPickedCards };
+    return {
+        activeCards,
+        shuffleDeck,
+        getNewCards,
+        pickCard,
+        unpickAllCards,
+    };
 }
