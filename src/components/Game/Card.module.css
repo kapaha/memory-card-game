@@ -2,26 +2,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    padding: 7.5%;
+
     background-color: var(--clr-dark-900);
-    border-radius: 8px;
-    padding: 15px;
-    width: 130px;
     border: 2px solid var(--clr-white);
 }
 
 .image {
     border: 5px double black;
-    width: 100%;
     background-color: var(--clr-white);
-    padding: 5px;
 }
 
 .text {
-    margin-top: 20px;
-    font-size: 1.25rem;
+    margin-top: 5%;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 2px;
+
     color: var(--clr-white);
     text-transform: capitalize;
 }

@@ -1,12 +1,11 @@
 .container {
-    padding: 20px 20px 0 20px;
+    padding: 10px 10px 0 10px;
 }
 
 .text {
     font-size: 1rem;
     font-weight: 600;
-    width: 100%;
-    padding: 0.25em 2em;
+    padding: 0.25em;
     border-radius: 0.5em;
     text-align: center;
     background-color: var(--clr-white);

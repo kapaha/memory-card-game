@@ -1,7 +1,11 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+
+    padding: 10px;
+    background-color: var(--clr-dark-800);
+    flex-grow: 1;
 }

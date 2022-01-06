@@ -1,6 +1,8 @@
 .header {
     background-color: var(--clr-dark-900);
-    padding: 20px 10px;
+    font-size: 0.8rem;
+    padding: 0.5em;
+    width: 100%;
 }
 
 .gameName {

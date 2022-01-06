@@ -3,4 +3,6 @@
     flex-direction: column;
     background-color: var(--clr-dark-800);
     flex-grow: 1;
+
+    max-width: 800px;
 }

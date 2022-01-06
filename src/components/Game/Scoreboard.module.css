@@ -1,7 +1,6 @@
 .container {
     display: flex;
-    justify-content: space-evenly;
-    padding: 20px 20px 0 20px;
+    padding: 10px;
 }
 
 .container > .score + .score {
@@ -9,9 +8,12 @@
 }
 
 .score {
-    padding: 0.5em 1em;
+    flex-basis: 100%;
+
+    padding: 0.25em;
     border-radius: 0.5em;
     text-align: center;
     background-color: #192a56;
     color: var(--clr-white);
+    white-space: nowrap;
 }

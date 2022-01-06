@@ -15,10 +15,16 @@
     margin: 0;
 }
 
-html,
-body,
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
 #root {
-    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -28,4 +34,9 @@ button {
     color: inherit;
     background-color: transparent;
     cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
