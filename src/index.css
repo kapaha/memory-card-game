@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import 'normalize.css';
 
 :root {
     --clr-dark-900: #2f3640;
