@@ -5,7 +5,7 @@ export default function Scoreboard({ currentScore, bestScore }) {
     return (
         <div className={classes.container}>
             <p className={`${classes.score} ${classes.currentScore}`}>
-                Current Score: {currentScore}
+                Score: {currentScore}
             </p>
             <p className={`${classes.score} ${classes.bestScore}`}>
                 Best Score: {bestScore}
