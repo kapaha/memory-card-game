@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.45470820.chunk.css",
+    "main.js": "/memory-card-game/static/js/main.2fdba2f0.chunk.js",
+    "main.js.map": "/memory-card-game/static/js/main.2fdba2f0.chunk.js.map",
+    "runtime-main.js": "/memory-card-game/static/js/runtime-main.57020724.js",
+    "runtime-main.js.map": "/memory-card-game/static/js/runtime-main.57020724.js.map",
+    "static/js/2.dc7590fa.chunk.js": "/memory-card-game/static/js/2.dc7590fa.chunk.js",
+    "static/js/2.dc7590fa.chunk.js.map": "/memory-card-game/static/js/2.dc7590fa.chunk.js.map",
+    "index.html": "/memory-card-game/index.html",
+    "static/css/main.45470820.chunk.css.map": "/memory-card-game/static/css/main.45470820.chunk.css.map",
+    "static/js/2.dc7590fa.chunk.js.LICENSE.txt": "/memory-card-game/static/js/2.dc7590fa.chunk.js.LICENSE.txt",
+    "static/media/axo trio.png": "/memory-card-game/static/media/axo trio.71ea6384.png",
+    "static/media/babs.png": "/memory-card-game/static/media/babs.6ca2f7ac.png",
+    "static/media/brooke.png": "/memory-card-game/static/media/brooke.8dee8054.png",
+    "static/media/floyd.png": "/memory-card-game/static/media/floyd.bc9d9d80.png",
+    "static/media/gorden.png": "/memory-card-game/static/media/gorden.a99bbfb5.png",
+    "static/media/kai.png": "/memory-card-game/static/media/kai.dfeb5cd3.png",
+    "static/media/maggie.png": "/memory-card-game/static/media/maggie.f7efd9fb.png",
+    "static/media/malcolm.png": "/memory-card-game/static/media/malcolm.36d8c72f.png",
+    "static/media/morty.png": "/memory-card-game/static/media/morty.c684fac8.png",
+    "static/media/omar.png": "/memory-card-game/static/media/omar.90e0a657.png",
+    "static/media/ratabaga.png": "/memory-card-game/static/media/ratabaga.09b96478.png",
+    "static/media/rocket.png": "/memory-card-game/static/media/rocket.05080197.png",
+    "static/media/simone.png": "/memory-card-game/static/media/simone.3639a084.png",
+    "static/media/tank.png": "/memory-card-game/static/media/tank.538f3eef.png",
+    "static/media/trinity.png": "/memory-card-game/static/media/trinity.b9d598a5.png",
+    "static/media/wendy.png": "/memory-card-game/static/media/wendy.57187189.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.57020724.js",
+    "static/js/2.dc7590fa.chunk.js",
+    "static/css/main.45470820.chunk.css",
+    "static/js/main.2fdba2f0.chunk.js"
+  ]
+}
