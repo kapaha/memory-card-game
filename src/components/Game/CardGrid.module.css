@@ -1,11 +1,13 @@
+/* DEFAULT: 320px — 480px: Mobile devices */
+
 .container {
     display: grid;
-    gap: 10px;
-
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     place-content: center;
 
     padding: 10px;
-    background-color: var(--clr-dark-800);
     flex-grow: 1;
+
+    background-color: var(--clr-dark-800);
 }

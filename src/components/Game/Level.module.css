@@ -1,13 +1,19 @@
+/* DEFAULT: 320px — 480px: Mobile devices */
+
 .container {
     padding: 10px 10px 0 10px;
+    text-align: center;
 }
 
 .text {
+    padding: 0.25em;
+
     font-size: 1rem;
     font-weight: 600;
-    padding: 0.25em;
-    border-radius: 0.5em;
     text-align: center;
+
+    border-radius: 1em;
+
+    color: var(--clr-dark-900);
     background-color: var(--clr-white);
-    color: var(--clr-dark-800);
 }

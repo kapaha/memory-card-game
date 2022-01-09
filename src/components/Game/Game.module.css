@@ -1,8 +1,8 @@
+/* DEFAULT: 320px — 480px: Mobile devices */
+
 .container {
     display: flex;
     flex-direction: column;
-    background-color: var(--clr-dark-800);
     flex-grow: 1;
-
-    max-width: 800px;
+    background-color: var(--clr-dark-800);
 }
