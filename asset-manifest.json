@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/memory-card-game/static/css/main.45470820.chunk.css",
-    "main.js": "/memory-card-game/static/js/main.2fdba2f0.chunk.js",
-    "main.js.map": "/memory-card-game/static/js/main.2fdba2f0.chunk.js.map",
+    "main.css": "/memory-card-game/static/css/main.43869998.chunk.css",
+    "main.js": "/memory-card-game/static/js/main.8aa9de67.chunk.js",
+    "main.js.map": "/memory-card-game/static/js/main.8aa9de67.chunk.js.map",
     "runtime-main.js": "/memory-card-game/static/js/runtime-main.57020724.js",
     "runtime-main.js.map": "/memory-card-game/static/js/runtime-main.57020724.js.map",
     "static/js/2.dc7590fa.chunk.js": "/memory-card-game/static/js/2.dc7590fa.chunk.js",
     "static/js/2.dc7590fa.chunk.js.map": "/memory-card-game/static/js/2.dc7590fa.chunk.js.map",
     "index.html": "/memory-card-game/index.html",
-    "static/css/main.45470820.chunk.css.map": "/memory-card-game/static/css/main.45470820.chunk.css.map",
+    "static/css/main.43869998.chunk.css.map": "/memory-card-game/static/css/main.43869998.chunk.css.map",
     "static/js/2.dc7590fa.chunk.js.LICENSE.txt": "/memory-card-game/static/js/2.dc7590fa.chunk.js.LICENSE.txt",
     "static/media/axo trio.png": "/memory-card-game/static/media/axo trio.71ea6384.png",
     "static/media/babs.png": "/memory-card-game/static/media/babs.6ca2f7ac.png",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.57020724.js",
     "static/js/2.dc7590fa.chunk.js",
-    "static/css/main.45470820.chunk.css",
-    "static/js/main.2fdba2f0.chunk.js"
+    "static/css/main.43869998.chunk.css",
+    "static/js/main.8aa9de67.chunk.js"
   ]
 }
