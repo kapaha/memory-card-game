@@ -1,10 +1,9 @@
 import React from 'react';
 import { useGame } from '../../hooks';
 import CardGrid from './CardGrid';
-import Scoreboard from './Scoreboard';
 import GameOver from './GameOver';
-import Level from './Level';
 import classes from './Game.module.css';
+import UserInterface from './UserInterface';
 
 export default function Game() {
     const {
@@ -23,8 +22,8 @@ export default function Game() {
                 <GameOver currentScore={currentScore} resetGame={resetGame} />
             ) : (
                 <>
-                    <Level currentLevel={currentLevel} />
-                    <Scoreboard
+                    <UserInterface
+                        currentLevel={currentLevel}
                         currentScore={currentScore}
                         bestScore={bestScore}
                     />

@@ -1,19 +1,8 @@
 /* DEFAULT: 320px — 480px: Mobile devices */
 
-.container {
-    display: flex;
-    padding: 10px 10px 0 10px;
-}
-
-.container > .score + .score {
-    margin-left: 10px;
-}
-
 .score {
     padding: 0.25em;
-    flex-basis: 100%;
 
-    font-size: 1rem;
     font-weight: 600;
     text-align: center;
 
@@ -21,4 +10,13 @@
 
     color: var(--clr-white);
     background-color: #0097e6;
+    height: 100%;
+}
+
+.currentScore {
+    grid-area: currentScore;
+}
+
+.bestScore {
+    grid-area: bestScore;
 }
