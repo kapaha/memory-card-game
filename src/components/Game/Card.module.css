@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: space-around;
 
-    width: 100%;
     padding: 7.5%;
 
     border: 2px solid var(--clr-white);
@@ -21,11 +20,17 @@
 }
 
 .text {
-    padding: 7.5% 7.5% 0 7.5%;
-
-    font-size: 1rem;
+    margin-top: 7.5%;
+    font-size: 0.9rem;
     letter-spacing: 2px;
     text-transform: capitalize;
     text-align: center;
     color: var(--clr-white);
+}
+
+/* 481px — 768px: iPads, Tablets */
+@media screen and (min-width: 481px) {
+    .text {
+        font-size: 1.2rem;
+    }
 }

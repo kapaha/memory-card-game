@@ -6,8 +6,15 @@
         'scoreboard scoreboard'
         'currentScore bestScore';
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content 1fr;
-    gap: 0.5rem;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--spacing);
 
-    padding: 0.5rem;
+    padding: var(--spacing);
+}
+
+/* 481px — 768px: iPads, Tablets */
+@media screen and (min-width: 481px) {
+    .container {
+        font-size: 1.5rem;
+    }
 }

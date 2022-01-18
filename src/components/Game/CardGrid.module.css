@@ -3,11 +3,14 @@
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    place-content: center;
 
-    padding: 10px;
     flex-grow: 1;
+    align-content: center;
 
     background-color: var(--clr-dark-800);
+
+    padding: var(--spacing);
+    gap: var(--spacing);
+
+    max-width: 600px;
 }

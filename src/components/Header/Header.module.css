@@ -2,13 +2,21 @@
 
 .header {
     background-color: var(--clr-dark-900);
-    font-size: 0.9rem;
-    padding: 0.5em;
     width: 100%;
 }
 
 .gameName {
-    text-align: center;
+    font-size: 1.8rem;
     font-weight: 600;
+    text-align: center;
     color: var(--clr-white);
+    margin: 0;
+    padding: 0.75em 0.25em;
+}
+
+/* 481px — 768px: iPads, Tablets */
+@media screen and (min-width: 481px) {
+    .gameName {
+        font-size: 2.5rem;
+    }
 }

@@ -15,16 +15,14 @@
     margin: 0;
 }
 
-body {
-    min-height: 100vh;
-    display: flex;
+html,
+body,
+#root {
+    height: 100%;
 }
 
-#root {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    background-color: var(--clr-dark-800);
 }
 
 button {

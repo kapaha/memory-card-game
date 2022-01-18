@@ -11,22 +11,23 @@
 
     flex-grow: 1;
     padding: 0.5rem;
+    font-size: 1rem;
 }
 
 .container > * + * {
-    margin-top: 2rem;
+    margin-top: 2em;
 }
 
 .gameOver {
     font-weight: 600;
-    font-size: 2.75rem;
+    font-size: 2.75em;
     margin: 0;
     text-transform: uppercase;
 }
 
 .score {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 .btn {
@@ -36,7 +37,7 @@
     color: var(--clr-white);
     background-color: var(--clr-dark-900);
     outline: solid transparent;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     font-weight: 600;
 }
 
@@ -50,4 +51,11 @@
     color: var(--clr-dark-900);
     border-color: currentColor;
     background-color: var(--clr-white);
+}
+
+/* 481px — 768px: iPads, Tablets */
+@media screen and (min-width: 481px) {
+    .container {
+        font-size: 1.25rem;
+    }
 }

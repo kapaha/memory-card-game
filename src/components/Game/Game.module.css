@@ -1,8 +1,18 @@
 /* DEFAULT: 320px — 480px: Mobile devices */
-
 .container {
+    --spacing: 10px;
+
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     background-color: var(--clr-dark-800);
+
+    padding: var(--spacing);
+}
+
+/* 481px — 768px: iPads, Tablets */
+@media screen and (min-width: 481px) {
+    .container {
+        --spacing: 12.5px;
+    }
 }
