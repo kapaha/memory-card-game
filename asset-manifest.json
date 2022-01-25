@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memory-card-game/static/css/main.151068b8.chunk.css",
+    "main.css": "/memory-card-game/static/css/main.9d3df406.chunk.css",
     "main.js": "/memory-card-game/static/js/main.5cd58945.chunk.js",
     "main.js.map": "/memory-card-game/static/js/main.5cd58945.chunk.js.map",
     "runtime-main.js": "/memory-card-game/static/js/runtime-main.57020724.js",
@@ -8,7 +8,7 @@
     "static/js/2.69294b0b.chunk.js": "/memory-card-game/static/js/2.69294b0b.chunk.js",
     "static/js/2.69294b0b.chunk.js.map": "/memory-card-game/static/js/2.69294b0b.chunk.js.map",
     "index.html": "/memory-card-game/index.html",
-    "static/css/main.151068b8.chunk.css.map": "/memory-card-game/static/css/main.151068b8.chunk.css.map",
+    "static/css/main.9d3df406.chunk.css.map": "/memory-card-game/static/css/main.9d3df406.chunk.css.map",
     "static/js/2.69294b0b.chunk.js.LICENSE.txt": "/memory-card-game/static/js/2.69294b0b.chunk.js.LICENSE.txt",
     "static/media/axo trio.png": "/memory-card-game/static/media/axo trio.71ea6384.png",
     "static/media/babs.png": "/memory-card-game/static/media/babs.6ca2f7ac.png",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.57020724.js",
     "static/js/2.69294b0b.chunk.js",
-    "static/css/main.151068b8.chunk.css",
+    "static/css/main.9d3df406.chunk.css",
     "static/js/main.5cd58945.chunk.js"
   ]
 }
