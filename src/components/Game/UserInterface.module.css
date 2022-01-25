@@ -21,3 +21,10 @@
         font-size: 1.5rem;
     }
 }
+
+/* 1025px - 1200px: Desktops, large screens */
+@media screen and (min-width: 1025px) {
+    .container {
+        font-size: 1.75rem;
+    }
+}
