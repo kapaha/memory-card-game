@@ -1,16 +1,13 @@
 /* DEFAULT: 320px — 480px: Mobile devices */
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    padding: var(--grid-spacing);
 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     flex-grow: 1;
     align-content: center;
 
     background-color: var(--clr-dark-800);
-
-    padding: var(--spacing);
-    gap: var(--spacing);
-
-    max-width: 600px;
 }

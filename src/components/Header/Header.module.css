@@ -20,3 +20,10 @@
         font-size: 2.5rem;
     }
 }
+
+/* 769px - 1024px: Small screens, laptops */
+@media screen and (min-width: 769px) {
+    .gameName {
+        font-size: 2.75rem;
+    }
+}

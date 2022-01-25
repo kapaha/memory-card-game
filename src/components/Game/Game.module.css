@@ -1,18 +1,28 @@
 /* DEFAULT: 320px — 480px: Mobile devices */
 .container {
     --spacing: 10px;
+    --grid-spacing: calc(var(--spacing) / 2);
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex-grow: 1;
     background-color: var(--clr-dark-800);
 
     padding: var(--spacing);
+    width: 100%;
 }
 
 /* 481px — 768px: iPads, Tablets */
 @media screen and (min-width: 481px) {
     .container {
         --spacing: 12.5px;
+    }
+}
+
+/* 769px - 1024px: Small screens, laptops */
+@media screen and (min-width: 769px) {
+    .container {
+        --spacing: 15px;
     }
 }

@@ -1,36 +1,55 @@
 /* DEFAULT: 320px — 480px: Mobile devices */
 
 .container {
+    margin: var(--grid-spacing);
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-
-    padding: 7.5%;
 
     border: 2px solid var(--clr-white);
+    border-radius: 3px;
 
     background-color: var(--clr-dark-900);
 }
 
 .image {
-    border: 5px double black;
+    --size: 82px;
+
+    width: var(--size);
+    height: var(--size);
+
+    border: 2px solid var(--clr-dark-900);
+    border-radius: 3px;
 
     background-color: var(--clr-white);
 }
 
 .text {
-    margin-top: 7.5%;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-    text-align: center;
+    font-size: 1rem;
     color: var(--clr-white);
+    text-transform: capitalize;
+    padding: 0.1em;
 }
 
 /* 481px — 768px: iPads, Tablets */
 @media screen and (min-width: 481px) {
+    .image {
+        --size: 130px;
+    }
+
     .text {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* 769px - 1024px: Small screens, laptops */
+@media screen and (min-width: 769px) {
+    .image {
+        --size: 170px;
+    }
+
+    .text {
+        font-size: 1.5rem;
     }
 }
