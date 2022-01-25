@@ -35,3 +35,10 @@
         --spacing: 20px;
     }
 }
+/* 1201px and more: Extra large screens, TV */
+@media screen and (min-width: 1201px) and (min-height: 1080px) {
+    .container {
+        --spacing: 25px;
+        max-width: 1000px;
+    }
+}

@@ -53,3 +53,14 @@
         font-size: 1.5rem;
     }
 }
+
+/* 1201px and more: Extra large screens, TV */
+@media screen and (min-width: 1201px) and (min-height: 1080px) {
+    .image {
+        --size: 180px;
+    }
+
+    .text {
+        font-size: 1.75rem;
+    }
+}
