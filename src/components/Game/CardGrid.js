@@ -7,7 +7,9 @@ export default function CardGrid({ activeCards, handleCardClick }) {
         <div className={classes.container}>
             {activeCards.map((card) => (
                 <Card
-                    key={card.name}
+                    // Math.random used to make cards
+                    // rerender every time so animation runs
+                    key={card.name + Math.random()}
                     card={card}
                     handleCardClick={handleCardClick}
                 />

@@ -11,6 +11,9 @@
     border-radius: 3px;
 
     background-color: var(--clr-dark-900);
+
+    animation-name: grow;
+    animation-duration: 0.5s;
 }
 
 .image {
@@ -30,6 +33,23 @@
     color: var(--clr-white);
     text-transform: capitalize;
     padding: 0.1em;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Prevent animation occuring who those who want reduced motion */
+@media (prefers-reduced-motion) {
+    .container {
+        animation: none;
+    }
 }
 
 /* 481px — 768px: iPads, Tablets */
