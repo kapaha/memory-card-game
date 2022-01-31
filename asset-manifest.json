@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/memory-card-game/static/css/main.c92434a4.chunk.css",
-    "main.js": "/memory-card-game/static/js/main.da2fc243.chunk.js",
-    "main.js.map": "/memory-card-game/static/js/main.da2fc243.chunk.js.map",
+    "main.css": "/memory-card-game/static/css/main.9c9ffab3.chunk.css",
+    "main.js": "/memory-card-game/static/js/main.d9a32118.chunk.js",
+    "main.js.map": "/memory-card-game/static/js/main.d9a32118.chunk.js.map",
     "runtime-main.js": "/memory-card-game/static/js/runtime-main.57020724.js",
     "runtime-main.js.map": "/memory-card-game/static/js/runtime-main.57020724.js.map",
-    "static/js/2.69294b0b.chunk.js": "/memory-card-game/static/js/2.69294b0b.chunk.js",
-    "static/js/2.69294b0b.chunk.js.map": "/memory-card-game/static/js/2.69294b0b.chunk.js.map",
+    "static/js/2.84c60305.chunk.js": "/memory-card-game/static/js/2.84c60305.chunk.js",
+    "static/js/2.84c60305.chunk.js.map": "/memory-card-game/static/js/2.84c60305.chunk.js.map",
     "index.html": "/memory-card-game/index.html",
-    "static/css/main.c92434a4.chunk.css.map": "/memory-card-game/static/css/main.c92434a4.chunk.css.map",
-    "static/js/2.69294b0b.chunk.js.LICENSE.txt": "/memory-card-game/static/js/2.69294b0b.chunk.js.LICENSE.txt",
+    "static/css/main.9c9ffab3.chunk.css.map": "/memory-card-game/static/css/main.9c9ffab3.chunk.css.map",
+    "static/js/2.84c60305.chunk.js.LICENSE.txt": "/memory-card-game/static/js/2.84c60305.chunk.js.LICENSE.txt",
     "static/media/axo trio.png": "/memory-card-game/static/media/axo trio.71ea6384.png",
     "static/media/babs.png": "/memory-card-game/static/media/babs.6ca2f7ac.png",
     "static/media/brooke.png": "/memory-card-game/static/media/brooke.8dee8054.png",
@@ -29,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.57020724.js",
-    "static/js/2.69294b0b.chunk.js",
-    "static/css/main.c92434a4.chunk.css",
-    "static/js/main.da2fc243.chunk.js"
+    "static/js/2.84c60305.chunk.js",
+    "static/css/main.9c9ffab3.chunk.css",
+    "static/js/main.d9a32118.chunk.js"
   ]
 }
