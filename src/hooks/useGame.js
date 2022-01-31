@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useCards, useScoreboard } from '.';
 
-const STARTING_CARDS_AMOUNT = 9;
+const STARTING_CARDS_AMOUNT = 3;
 const MAX_CARDS_AMOUNT = 9;
 
 export default function useGame() {
