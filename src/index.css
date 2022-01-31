@@ -38,3 +38,27 @@ img {
     max-width: 100%;
     display: block;
 }
+
+.btn {
+    min-width: 10mm;
+    min-height: 10mm;
+    border-radius: 0.4em;
+    padding: 0.5em 1em;
+    color: var(--clr-white);
+    background-color: var(--clr-dark-900);
+    outline: solid transparent;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--clr-dark-900);
+    border-color: currentColor;
+    background-color: var(--clr-white);
+}

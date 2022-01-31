@@ -6,7 +6,7 @@ export default function GameOver({ currentScore, resetGame }) {
         <div className={classes.container}>
             <h1 className={classes.gameOver}>Game Over</h1>
             <h2 className={classes.score}>Score: {currentScore}</h2>
-            <button className={classes.btn} onClick={resetGame}>
+            <button className="btn" onClick={resetGame}>
                 New Game
             </button>
         </div>

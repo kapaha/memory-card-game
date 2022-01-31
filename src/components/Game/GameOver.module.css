@@ -30,29 +30,6 @@
     font-size: 1.5em;
 }
 
-.btn {
-    border: solid 2px transparent;
-    border-radius: 0.4em;
-    padding: 0.5em 1em;
-    color: var(--clr-white);
-    background-color: var(--clr-dark-900);
-    outline: solid transparent;
-    font-size: 1.25em;
-    font-weight: 600;
-}
-
-.btn:active {
-    transform: translateY(1px);
-    filter: saturate(150%);
-}
-
-.btn:hover,
-.btn:focus {
-    color: var(--clr-dark-900);
-    border-color: currentColor;
-    background-color: var(--clr-white);
-}
-
 /* 481px — 768px: iPads, Tablets */
 @media screen and (min-width: 481px) {
     .container {

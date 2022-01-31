@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useCards, useScoreboard } from '.';
 
-const STARTING_CARDS_AMOUNT = 3;
+const STARTING_CARDS_AMOUNT = 9;
 const MAX_CARDS_AMOUNT = 9;
 
 export default function useGame() {
@@ -9,6 +9,7 @@ export default function useGame() {
     const [pickedCardCount, setPickedCardCount] = useState(0);
     const [cardsAmount, setCardsAmount] = useState(STARTING_CARDS_AMOUNT);
     const [currentLevel, setCurrentLevel] = useState(1);
+    const [showInstructions, setShowInstructions] = useState(true);
 
     const { activeCards, shuffleDeck, getNewCards, pickCard, unpickAllCards } =
         useCards(cardsAmount);
@@ -56,6 +57,10 @@ export default function useGame() {
         setIsGameOver(false);
     }
 
+    function toggleInstructions() {
+        setShowInstructions((prev) => !prev);
+    }
+
     return {
         activeCards,
         currentScore,
@@ -64,5 +69,7 @@ export default function useGame() {
         isGameOver,
         resetGame,
         currentLevel,
+        showInstructions,
+        toggleInstructions,
     };
 }

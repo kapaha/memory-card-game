@@ -6,13 +6,21 @@
 
     display: grid;
     grid-template-areas:
-        'scoreboard scoreboard'
-        'currentScore bestScore';
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+        'scoreboard scoreboard scoreboard'
+        'currentScore instructionsBtn bestScore';
+    grid-template-columns: 1fr auto 1fr;
     gap: var(--spacing);
 
     padding: var(--spacing);
+}
+
+.instructionsBtn {
+    composes: score from './Scoreboard.module.css';
+
+    grid-area: instructionsBtn;
+    padding: 0.25em 0.75em;
+
+    background-color: var(--clr-dark-900);
 }
 
 /* 481px — 768px: iPads, Tablets */

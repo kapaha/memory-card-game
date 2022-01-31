@@ -10,6 +10,8 @@
 
     color: var(--clr-white);
     background-color: #0097e6;
+
+    height: min-content;
 }
 
 .currentScore {
