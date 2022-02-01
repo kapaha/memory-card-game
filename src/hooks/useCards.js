@@ -8,7 +8,9 @@ import {
 function getRandomCards(data, count) {
     const randomCards = [];
 
-    for (let i = 0; i < Math.min(count, data.length); i++) {
+    const cardsRequired = Math.min(count, data.length);
+
+    for (let i = 0; i < cardsRequired; i++) {
         let randomCard = getRandomArrayElement(data);
 
         while (randomCards.includes(randomCard)) {
