@@ -20,22 +20,9 @@ export default function useGame() {
         resetCurrentScore,
     } = useScoreboard();
 
-    function handleCardClick(card) {
-        if (card.hasBeenPicked) {
-            setIsGameOver(true);
-            return;
-        }
-
+    function handlePickCard(card) {
         pickCard(card);
         setPickedCardCount((prevState) => (prevState += 1));
-
-        incrementCurrentScore();
-
-        if (pickedCardCount + 1 >= activeCards.length) {
-            levelUp();
-        }
-
-        shuffleDeck();
     }
 
     function levelUp() {
@@ -48,6 +35,21 @@ export default function useGame() {
         } else {
             getNewCards();
         }
+    }
+
+    function handleCardClick(card) {
+        if (card.hasBeenPicked) {
+            setIsGameOver(true);
+            return;
+        }
+
+        handlePickCard(card);
+        incrementCurrentScore();
+
+        const allCardsPicked = pickedCardCount + 1 >= activeCards.length;
+        if (allCardsPicked) levelUp();
+
+        shuffleDeck();
     }
 
     function resetGame() {
