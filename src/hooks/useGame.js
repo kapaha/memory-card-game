@@ -45,6 +45,8 @@ export default function useGame() {
 
         if (cardsAmount + 1 <= MAX_CARDS_AMOUNT) {
             setCardsAmount((prevState) => (prevState += 1));
+        } else {
+            getNewCards();
         }
     }
 
