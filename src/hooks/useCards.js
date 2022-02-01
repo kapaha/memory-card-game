@@ -1,39 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
-    getRandomArrayElement,
+    getRandomArrayElements,
     getFileNameFromLocalPath,
     importImages,
+    getShuffledArray,
 } from '../utils';
-
-function getRandomCards(data, count) {
-    const randomCards = [];
-
-    const cardsRequired = Math.min(count, data.length);
-
-    for (let i = 0; i < cardsRequired; i++) {
-        let randomCard = getRandomArrayElement(data);
-
-        while (randomCards.includes(randomCard)) {
-            randomCard = getRandomArrayElement(data);
-        }
-
-        randomCards.push(randomCard);
-    }
-    return randomCards;
-}
-
-function getShuffledDeck(deckToShuffle) {
-    const deck = [...deckToShuffle];
-
-    for (let i = deck.length - 1; i > 0; i--) {
-        let randomIndex = Math.floor(Math.random() * (i + 1));
-
-        // swap elements array[i] and array[randomIndex]
-        [deck[i], deck[randomIndex]] = [deck[randomIndex], deck[i]];
-    }
-
-    return deck;
-}
 
 function createCards(imageModules) {
     return Object.keys(imageModules).map((key) => {
@@ -49,31 +20,35 @@ export default function useCards(count) {
     const [cards, setCards] = useState([]);
     const [activeCards, setActiveCards] = useState([]);
 
+    const getNewCards = useCallback(() => {
+        const cardsRequired = Math.min(count, cards.length);
+        const randomCards = getRandomArrayElements(cards, cardsRequired);
+
+        setActiveCards(randomCards);
+    }, [cards, count]);
+
     function shuffleDeck() {
-        setActiveCards((prevState) => getShuffledDeck(prevState));
+        setActiveCards((prevState) => getShuffledArray(prevState));
     }
 
-    function getNewCards() {
-        const randomCards = getRandomCards(cards, count);
-        setActiveCards(randomCards);
+    function createPickedCard(card, isPicked) {
+        return {
+            ...card,
+            hasBeenPicked: isPicked,
+        };
     }
 
     function pickCard(pickedCard) {
         setActiveCards((prevState) =>
             prevState.map((card) =>
-                card === pickedCard
-                    ? {
-                          ...card,
-                          hasBeenPicked: true,
-                      }
-                    : card
+                card === pickedCard ? createPickedCard(card, true) : card
             )
         );
     }
 
     function unpickAllCards() {
         setActiveCards((prevState) =>
-            prevState.map((card) => ({ ...card, hasBeenPicked: false }))
+            prevState.map((card) => createPickedCard(card, false))
         );
     }
 
@@ -82,15 +57,12 @@ export default function useCards(count) {
         setCards(createCards(cardsImgModules));
     }, []);
 
-    useEffect(() => {
-        const randomCards = getRandomCards(cards, count);
-        setActiveCards(randomCards);
-    }, [count, cards]);
+    useEffect(getNewCards, [count, cards, getNewCards]);
 
     return {
         activeCards,
-        shuffleDeck,
         getNewCards,
+        shuffleDeck,
         pickCard,
         unpickAllCards,
     };
