@@ -1,13 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function useScoreboard() {
     const [currentScore, setCurrentScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
 
+    useEffect(() => {
+        if (currentScore > bestScore) {
+            setBestScore(currentScore);
+        }
+    }, [currentScore, bestScore]);
+
     function incrementCurrentScore() {
         setCurrentScore((prevState) => (prevState += 1));
-
-        if (currentScore + 1 > bestScore) setBestScore(currentScore + 1);
     }
 
     function resetCurrentScore() {
