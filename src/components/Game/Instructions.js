@@ -1,19 +1,11 @@
 import React from 'react';
 import classes from './Instructions.module.css';
 
-export default function Instructions({ showInstructions, toggleInstructions }) {
-    const overlayClass = showInstructions
-        ? `${classes.overlay} ${classes.overlayActive}`
-        : classes.overlay;
-
-    const modalClass = showInstructions
-        ? `${classes.modal} ${classes.modalActive}`
-        : classes.modal;
-
+export default function Instructions({ toggleInstructions }) {
     return (
         <>
-            <div className={overlayClass} onClick={toggleInstructions}></div>
-            <div className={modalClass}>
+            <div className={classes.overlay} onClick={toggleInstructions}></div>
+            <div className={classes.modal}>
                 <h1 className={classes.modalTitle}>How To Play</h1>
                 <p className={classes.modalText}>
                     Click each card that hasn't been clicked during the current

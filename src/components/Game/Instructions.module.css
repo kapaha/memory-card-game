@@ -6,16 +6,8 @@
     right: 0;
     bottom: 0;
 
-    opacity: 0;
     background-color: rgba(0, 0, 0, 0.75);
     pointer-events: none;
-
-    transition: 350ms ease-in-out;
-}
-
-.overlayActive {
-    opacity: 1;
-    pointer-events: all;
 }
 
 .modal {
@@ -25,7 +17,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%);
 
     z-index: 3;
 
@@ -39,8 +31,6 @@
 
     background-color: var(--clr-dark-800);
     color: var(--clr-white);
-
-    transition: 350ms ease-in-out;
 }
 
 .modal > * + * {
@@ -51,10 +41,6 @@
     font-size: 2rem;
     background-color: var(--clr-dark-900);
     padding: 1rem;
-}
-
-.modalActive {
-    transform: translate(-50%, -50%) scale(1);
 }
 
 .btn {

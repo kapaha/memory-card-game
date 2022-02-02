@@ -4,12 +4,18 @@ import { useCards, useScoreboard } from '.';
 const STARTING_CARDS_AMOUNT = 3;
 const MAX_CARDS_AMOUNT = 9;
 
+const GAME_STATES = {
+    SHOW_INSTRUCTIONS: 'SHOW_INSTRUCTIONS',
+    PLAYING: 'PLAYING',
+    GAME_OVER: 'GAME_OVER',
+};
+
 export default function useGame() {
-    const [isGameOver, setIsGameOver] = useState(false);
-    const [pickedCardCount, setPickedCardCount] = useState(0);
     const [cardsAmount, setCardsAmount] = useState(STARTING_CARDS_AMOUNT);
     const [currentLevel, setCurrentLevel] = useState(1);
-    const [showInstructions, setShowInstructions] = useState(true);
+    const [pickedCardCount, setPickedCardCount] = useState(0);
+
+    const [gameState, setGameState] = useState(GAME_STATES.SHOW_INSTRUCTIONS);
 
     const { activeCards, shuffleDeck, getNewCards, pickCard, unpickAllCards } =
         useCards(cardsAmount);
@@ -39,7 +45,7 @@ export default function useGame() {
 
     function handleCardClick(card) {
         if (card.hasBeenPicked) {
-            setIsGameOver(true);
+            setGameState(GAME_STATES.GAME_OVER);
             return;
         }
 
@@ -58,22 +64,29 @@ export default function useGame() {
         setCardsAmount(STARTING_CARDS_AMOUNT);
         setCurrentLevel(1);
         getNewCards();
-        setIsGameOver(false);
+        setGameState(GAME_STATES.PLAYING);
     }
 
     function toggleInstructions() {
-        setShowInstructions((prev) => !prev);
+        setGameState((prev) =>
+            prev === GAME_STATES.SHOW_INSTRUCTIONS
+                ? GAME_STATES.PLAYING
+                : GAME_STATES.SHOW_INSTRUCTIONS
+        );
     }
 
     return {
-        activeCards,
-        currentScore,
-        bestScore,
-        handleCardClick,
-        isGameOver,
-        resetGame,
-        currentLevel,
-        showInstructions,
-        toggleInstructions,
+        gameState,
+        props: {
+            instructions: { showInstructions: true, toggleInstructions },
+            userInterface: {
+                currentLevel,
+                currentScore,
+                bestScore,
+                toggleInstructions,
+            },
+            cardGrid: { activeCards, handleCardClick },
+            gameOver: { currentScore, resetGame },
+        },
     };
 }
